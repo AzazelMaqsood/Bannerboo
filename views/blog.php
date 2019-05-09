@@ -1,3 +1,5 @@
+<?php 
+require "../db.php" ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -56,7 +58,7 @@
                         Вот пять вещей, которые вы должны четко понимать, прежде чем окунуться с головой в мир лидогенераций и больших прибылей.
                 </p>
 
-                <a href="./blog-more.html">
+                <a href="./blog-more.php">
                     <button class="btn-more-blog">
                         Подробнее
                     </button>
@@ -93,7 +95,7 @@
                             Вот пять вещей, которые вы должны четко понимать, прежде чем окунуться с головой в мир лидогенераций и больших прибылей.
                     </p>
 
-                    <a href="./blog-more.html">
+                    <a href="./blog-more.php">
                         <button class="btn-more-blog">
                             Подробнее
                         </button>
@@ -129,7 +131,7 @@
                                 Вот пять вещей, которые вы должны четко понимать, прежде чем окунуться с головой в мир лидогенераций и больших прибылей.
                         </p>
 
-                        <a href="./blog-more.html">
+                        <a href="./blog-more.php">
                             <button class="btn-more-blog">
                                 Подробнее
                             </button>

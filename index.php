@@ -1,6 +1,4 @@
 <?php 
-
-session_start();
 require "db.php";
 ?>
 
@@ -65,8 +63,8 @@ require "db.php";
                                 <a href="#">
                                     <?php if( isset($_SESSION['logged_user'])) :?>
                                     
-                                    <button class="btn-login">Выйти</button>
-                                    <?php unset($_SESSION['logged_user']); ?>
+                                    <a href="./logout.php"><button class="btn-login">Выйти</button></a>
+
                                     <?php else : ?>
                                     <a href="#openModal"><button class="btn-login">Войти</button></a>
                                     <?php endif; ?>

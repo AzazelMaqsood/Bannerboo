@@ -1,3 +1,4 @@
+
 <header class="header-blog" id="header-blog">
     <div class="container">
         <div class="row">   
@@ -36,9 +37,7 @@
                         </li>
                         <a href="">
                             <?php if( isset($_SESSION['logged_user'])) :?>
-                            
-                            <button class="btn-profile">Выйти</button>
-                            <?php unset($_SESSION['logged_user']); ?>
+                            <a href="../logout.php"><button class="btn-profile">Выйти</button></a>
                             <?php else : ?>
                             <a href="#openModal"><button class="btn-profile">Войти</button></a>
                             <?php endif; ?>

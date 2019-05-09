@@ -32,7 +32,7 @@
         <a href="#close" title="Закрыть" class="close">x</a>
         
         <h2>АВТОРИЗАЦИЯ</h2>
-        <form action="./views/profile.php" method="POST">
+        <form action="/" method="POST">
             <p>
                 <div class="form-group">
                     <input type="text" name="login" class="form-control" placeholder="Введите логин" required value="<?php echo @$data['login']; ?>">
