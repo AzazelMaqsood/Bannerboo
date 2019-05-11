@@ -60,10 +60,10 @@
                     <div class="choose-size grey">
                         <img src="../img/arrow_left.png" alt="arrow_left" class="arrow1">
                         <img src="../img/970х90_slider.png" alt="" class="size-slider">
-                        <img src="../img/970х90_slider.png" alt="" class="size-slider">
-                        <img src="../img/970х90_slider.png" alt="" class="size-slider">
-                        <img src="../img/970х90_slider.png" alt="" class="size-slider">
-                        <img src="../img/970х90_slider.png" alt="" class="size-slider">
+                        <img src="../img/728х90_slider.png" alt="" class="size-slider">
+                        <img src="../img/300х250_slider.png" alt="" class="size-slider">
+                        <img src="../img/120x600_slider.png" alt="" class="size-slider">
+                        <img src="../img/250x250_slider.png" alt="" class="size-slider">
                         <img src="../img/arrow_right.png" alt="arrow_right" class="arrow2">
                     </div>
                 </div>
@@ -160,33 +160,34 @@
 
             <div class="configuration">
                 <div class="row">
-                    <div class="col-lg-6 d-flex">
+                    <div class="col-lg-7 d-flex">
                         <p>Шрифты</p>
-                        <a href="#openPreLoader"><button class="btnChoose">Выбрать</button></a>
+                        <input type="file" id="upload_fonts" name="upload_fonts" accept=".EOT, .WOFF, .WOFF2, .TTF, .SVG" >
+
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 d-flex">
+                    <div class="col-lg-7 d-flex">
                         <p>Логотип в векторе</p>
-                        <a href="#openPreLoader"><button class="btnChoose">Выбрать</button></a>
+                        <input type="file" id="upload_logo" name="upload_fonts" accept=".EPS, .PDF, .AI, .CDR, .JPG, .PNG, .GIF, .PSD, .SVG, .SWF, .WMF, .CMX">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 d-flex">
+                    <div class="col-lg-7 d-flex">
                         <p>Исходный креатив</p>
-                        <a href="#openPreLoader"><button class="btnChoose">Выбрать</button></a>
+                        <input type="file" id="upload_creative" name="upload_fonts" accept="">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 d-flex">
+                    <div class="col-lg-7 d-flex">
                         <p>Мастер баннер для ресайза или шаблон</p>
-                        <a href="#openPreLoader"><button class="btnChoose">Выбрать</button></a>
+                        <input type="file" id="upload_banner" name="upload_fonts" accept="">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 d-flex">
+                    <div class="col-lg-7 d-flex">
                         <p>Доп.материал (до 20 мб*)</p>
-                        <a href="#openPreLoader"><button class="btnChoose">Выбрать</button></a>
+                        <input type="file" id="upload_material" name="upload_fonts" accept="">
                     </div>
                 </div>
 
@@ -209,7 +210,7 @@
                 </div>
                 
                 <div class="col-lg-4 d-flex justify-content-end">
-                    <a href="./create-banner-2step.html"><button type="submit" class="btnRun">ЗАПУСТИТЬ</button></a>
+                    <a href="../send_banner.php"><button type="submit" class="btnRun">ЗАПУСТИТЬ</button></a>
                 </div>
             </div>
         </div>

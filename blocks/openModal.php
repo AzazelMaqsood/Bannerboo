@@ -21,7 +21,8 @@
 
         if( !empty($errors) )
         {
-            echo '<div class="container"><div id="errors">'.array_shift($errors).'</div></div>';
+            echo '<div class=""><div id="errors" class="alert alert-warning alert-dismissible" role="alert" style="margin-bottom:0px; text-align: center;"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>'.array_shift($errors).'</div></div>';
         }
     }
 
@@ -29,7 +30,7 @@
 
 <div id="openModal" class="modalDialog">
     <div>
-        <a href="#close" title="Закрыть" class="close">x</a>
+        <a href="#close1" title="Закрыть" class="close1">x</a>
         
         <h2>АВТОРИЗАЦИЯ</h2>
         <form action="./profile.php" method="POST">

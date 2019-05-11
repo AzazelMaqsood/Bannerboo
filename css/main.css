@@ -19,6 +19,18 @@ ul, li {
     margin: 0;
 }
 
+*, 
+*:active, 
+*:focus {
+    outline: none;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
 /*Первый экран*/
 
 .header {
@@ -72,6 +84,7 @@ ul, li {
 
 .btn-login:hover {
     background:#53a7ea;
+    
 }
 
 .modalDialog {
@@ -156,7 +169,7 @@ ul, li {
     text-decoration: underline;
 }
 
-.close {
+.close1 {
     text-decoration: none!important;
 	background: #606061;
 	color: #FFFFFF;
@@ -179,7 +192,7 @@ ul, li {
     font-weight: 300!important;
 }
 
-.close:hover { 
+.close1:hover { 
     background: #00d9ff; 
 }
 
@@ -1317,6 +1330,8 @@ color: #ffffff;
 }
 
 .choose-size .size-slider{
+    height: 136px;
+    width: 197px;
     padding: 2px;
 }
 
@@ -1615,10 +1630,11 @@ color: #ffffff;
     background: #205fd1;
 }
 
-.other{
+.other {
     color: #3b4a8c !important;
     font-family: "PT Sans" !important;
 }
+
 
 
 /*Медиа-запросы*/
