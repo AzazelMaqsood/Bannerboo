@@ -129,18 +129,18 @@ require "../db.php";
 
                     <p>
                         <div class="form-group">
-                            <input type="text" name="login" class="form-control" id="InputLogin" placeholder="ПРИДУМАЙТЕ ЛОГИН" required value="<?php echo @$data['login']; ?>">
+                            <input type="text" name="login" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" class="form-control" id="InputLogin" placeholder="ПРИДУМАЙТЕ ЛОГИН" required value="<?php echo @$data['login']; ?>">
                         </div>
                     </p>
 
                     <p>
                         <div class="form-group">
-                            <input type="password" name="password" class="form-control" id="inputPasswordReg" placeholder="ПАРОЛЬ" required>
+                            <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" class="form-control" id="inputPasswordReg" placeholder="ПАРОЛЬ" required>
                         </div>
                     </p>
                     <p>
                         <div class="form-group">
-                            <input type="password" name="password2" class="form-control" id="inputPasswordReg2" placeholder="ПОДТВЕРДИТЕ ПАРОЛЬ" required>
+                            <input type="password" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" class="form-control" id="inputPasswordReg2" placeholder="ПОДТВЕРДИТЕ ПАРОЛЬ" required>
                         </div>
                     </p>
 

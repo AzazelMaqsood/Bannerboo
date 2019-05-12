@@ -1,5 +1,5 @@
 <?php 
-require "db.php";
+require "./db.php";
 ?>
 
 <!DOCTYPE html>
@@ -459,7 +459,7 @@ require "db.php";
         </div>
     </section>
 
-    <?php require "/blocks/footer.php" ?>
+    <?php require "./blocks/footer.php" ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
