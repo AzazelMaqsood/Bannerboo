@@ -4,13 +4,13 @@ require_once "libs/mailer/PHPMailerAutoload.php";
 
 if($_POST && isset($_FILES['upload_fonts']))
 {
-    $recipient_email    = "recipient@yourmail.com"; //recepient
-    $from_email         = "info@your_domain.com"; //from email using site domain.
-    $subject            = "Attachment email from your website!"; //email subject line
+    // $recipient_email    = "recipient@yourmail.com"; //recepient
+    // $from_email         = "info@your_domain.com"; //from email using site domain.
+    // $subject            = "Attachment email from your website!"; //email subject line
 
-    $sender_name = 'skullhead99@mail.ru'; //capture sender name
-    $sender_email = 'skullhead99@mail.ru'; //capture sender email
-    $sender_message = 'skullhead99@mail.ru'; //capture message
+    // $sender_name = 'skullhead99@mail.ru'; //capture sender name
+    // $sender_email = 'skullhead99@mail.ru'; //capture sender email
+    // $sender_message = 'skullhead99@mail.ru'; //capture message
     $attachments = $_FILES;
 
     // $file_count = count($attachments['name']); //count total files attached
@@ -71,15 +71,19 @@ $mail->SMTPDebug = 3;                               // Enable verbose debug outp
 // $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->isMail();
-
-$mail->setFrom('from@example.com', 'Mailer');
-$mail->addAddress('informmpt@gmail.com', 'Joe User');     // Add a recipient
-$mail->addReplyTo('info@example.com', 'Information');
-$mail->addCC('cc@example.com');
-$mail->addBCC('bcc@example.com');
+$mail->CharSet = 'UTF-8';   
+$mail->setFrom('from@gobanner.com', 'GoBanner заказ баннера');
+$mail->addAddress('skullhead99@mail.ru', 'Joe User');     // Add a recipient
+$mail->addReplyTo('skullhead99@mail.ru', 'Information');
+$mail->addCC('skullhead99@mail.ru');
+$mail->addBCC('skullhead99@mail.ru');
 
 $mail->addAttachment($attachments['upload_fonts']['tmp_name'], $attachments['upload_fonts']['name']);         // Add attachments
-$mail->addAttachment($attachments['upload_fonts']['tmp_name'], $attachments['upload_fonts']['name']);    // Optional name
+$mail->addAttachment($attachments['upload_logo']['tmp_name'], $attachments['upload_logo']['name']); 
+$mail->addAttachment($attachments['upload_creative']['tmp_name'], $attachments['upload_creative']['name']);         // Add attachments
+$mail->addAttachment($attachments['upload_banner']['tmp_name'], $attachments['upload_banner']['name']);
+$mail->addAttachment($attachments['upload_material']['tmp_name'], $attachments['upload_material']['name']); 
+  // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Here is the subject';
