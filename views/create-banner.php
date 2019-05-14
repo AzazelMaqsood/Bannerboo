@@ -22,7 +22,7 @@
 
     <section class="create-banner-content">
         <div class="container">
-            <form action="../test1.php" method="POST" enctype="multipart/form-data">
+            <form action="../send_banner.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>СОЗДАТЬ БАННЕР</h1>
@@ -76,7 +76,7 @@
                     <div class="row">
                         <div class="col-lg-12 d-flex justify-content-center">
                                 <p>Ширина</p>
-                                <input type="width" size="1">
+                                <input type="text" size="1" name="width-banner">
                         </div>
 
                         <div class="col-lg-8">
@@ -86,7 +86,7 @@
                         <div class="banner-height">
                             <div class="col-lg-2 d-flex justify-content-center">
                                 <p>Высота</p>
-                                <input type="width" size="1">
+                                <input type="text" size="1" name="height-banner">
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="choose-size grey">
-                                <button type="submit" class="btn">СОХРАНИТЬ</button>
+                                <a class="btn">СОХРАНИТЬ</a>
                             </div>
                         </div>
                     </div>
@@ -163,31 +163,36 @@
                     <div class="row">
                         <div class="col-lg-7 d-flex">
                             <p>Шрифты</p>
-                            <input type="file" id="upload_fonts" name="upload_fonts" accept=".EOT, .WOFF, .WOFF2, .TTF, .SVG" >
+                            <input type="file" id="upload_fonts" name="upload_fonts" accept=".EOT, .WOFF, .WOFF2, .TTF, .SVG" class="hide">
+                            <label for="upload_fonts" class="upload"><span>Выбрать</span></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-7 d-flex">
                             <p>Логотип в векторе</p>
-                            <input type="file" id="upload_logo" name="upload_logo" accept=".EPS, .PDF, .AI, .CDR, .JPG, .PNG, .GIF, .PSD, .SVG, .SWF, .WMF, .CMX">
+                            <input type="file" id="upload_logo" name="upload_logo" accept=".EPS, .PDF, .AI, .CDR, .JPG, .PNG, .GIF, .PSD, .SVG, .SWF, .WMF, .CMX" class="hide">
+                            <label for="upload_logo" class="upload"><span>Выбрать</span></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-7 d-flex">
                             <p>Исходный креатив</p>
-                            <input type="file" id="upload_creative" name="upload_creative" accept="">
+                            <input type="file" id="upload_creative" name="upload_creative" accept="" class="hide">
+                            <label for="upload_creative" class="upload"><span>Выбрать</span></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-7 d-flex">
                             <p>Мастер баннер для ресайза или шаблон</p>
-                            <input type="file" id="upload_banner" name="upload_banner" accept="">
+                            <input type="file" id="upload_banner" name="upload_banner" accept="" class="hide">
+                            <label for="upload_banner" class="upload"><span>Выбрать</span></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-7 d-flex">
                             <p>Доп.материал (до 20 мб*)</p>
-                            <input type="file" id="upload_material" name="upload_material" accept="">
+                            <input type="file" id="upload_material" name="upload_material" accept="" class="hide">
+                            <label for="upload_material" class="upload"><span>Выбрать</span></label>
                         </div>
                     </div>
 

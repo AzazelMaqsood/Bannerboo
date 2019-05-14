@@ -22,77 +22,70 @@
 
     <section class="choose-result-content">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>ВЫБЕРИТЕ РУЗЛЬТАТ</h1>  
-                </div>
-            </div>
-
-            <div class="hint">
+            <form action="../send_banner2.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Выберите отображение результатов и модерации</p>
-                    </div>
-                    <div class="col-lg-12"><hr></div>
-                    <div class="col-lg-12">
-                        <input id="fbf" type="radio" value="fbf" name="result">
-                        <label for="fbf">Покадровый, без анимации (~ 30 мин)</label>
-                    </div>
-                    <div class="col-lg-10">
-                        <img src="../img/fbf.png" alt="" class="bunny img-fluid">
-                    </div>
-                    <div class="col-lg-2">
-                        <p class="ins"> - без верстки</p>
-                        <p class="ins"> - без анимации</p>
+                        <h1>ВЫБЕРИТЕ РУЗЛЬТАТ</h1>  
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input id="auto" type="radio" value="auto" name="result">
-                        <label for="auto">Верстка анимации (авто режим) (~ 45 мин)</label>
+                <div class="hint">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Выберите отображение результатов и модерации</p>
+                        </div>
+                        <div class="col-lg-12"><hr></div>
+                        <div class="col-lg-12">
+                            <input id="fbf" type="radio" value="Покадровый, без анимации" name="result">
+                            <label for="fbf">Покадровый, без анимации (~ 30 мин)</label>
+                        </div>
+                        <div class="col-lg-10">
+                            <img src="../img/fbf.png" alt="" class="bunny img-fluid">
+                        </div>
+                        <div class="col-lg-2">
+                            <p class="ins"> - без верстки</p>
+                            <p class="ins"> - без анимации</p>
+                        </div>
                     </div>
-                    <div class="col-lg-5">
-                        <img src="../img/auto.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-7">
-                        <p class="ins"> - анимация</p>
-                        <p class="ins"> - авторежим</p>
-                        <p class="ins"> - без правок</p>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input id="manual" type="radio" value="manual" name="result">
-                        <label for="manual">Верстка с ручной модерацией (~ 50 мин)</label>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input id="auto" type="radio" value="Верстка анимации (авто режим)" name="result">
+                            <label for="auto">Верстка анимации (авто режим) (~ 45 мин)</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src="../img/auto.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
+                            <p class="ins"> - анимация</p>
+                            <p class="ins"> - авторежим</p>
+                            <p class="ins"> - без правок</p>
+                        </div>
                     </div>
-                    <div class="col-lg-5">
-                        <img src="../img/manualmoderation.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-lg-7">
-                        <p class="ins"> - анимация</p>
-                        <p class="ins"> - авторежим</p>
-                        <p class="ins"> - правки</p>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-lg-4 justify-content-end">
-                        <a href="#openPreLoader"><button type="submit" class="btnSend">ОТПРАВИТЬ НА ВЕРСТКУ</button></a>
-                        <div id="openPreLoader" class="PreLoader">
-                            <div>
-                                <a href="#close" title="Закрыть" class="close">x</a>
-                                
-                                <h1>МЫ ПАРСИМ ВАШИ БАННЕРЫ,<br> РЕЗУЛЬТАТ СКОРО ПРИДЕТ ВАМ НА ПОЧТУ</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input id="manual" type="radio" value="Верстка с ручной модерацией" name="result">
+                            <label for="manual">Верстка с ручной модерацией (~ 50 мин)</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src="../img/manualmoderation.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
+                            <p class="ins"> - анимация</p>
+                            <p class="ins"> - авторежим</p>
+                            <p class="ins"> - правки</p>
+                        </div>
+                    </div>
 
-                                <a href="#close"><button>ОК</button></a>
-                            </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-lg-4 justify-content-end">
+                            <button type="submit" class="btnSend">ОТПРАВИТЬ НА ВЕРСТКУ</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 

@@ -4,7 +4,7 @@ require 'db.php';
 
 require_once "libs/mailer/PHPMailerAutoload.php";
 
-if($_POST && isset($_FILES['upload_fonts']))
+if($_POST && isset($_POST['result']))
 {
     // $recipient_email    = "recipient@yourmail.com"; //recepient
     // $from_email         = "info@your_domain.com"; //from email using site domain.
@@ -15,9 +15,10 @@ if($_POST && isset($_FILES['upload_fonts']))
     // $sender_message = 'skullhead99@mail.ru'; //capture message
     $sender_name = $_SESSION['logged_user']['name'];
     $sender_email = $_SESSION['logged_user']['email'];
-    $attachments = $_FILES;
-    $format = $_POST['format'];
-    $advertising = $_POST['advertising'];
+    // $attachments = $_FILES;
+    // $format = $_POST['format'];
+    // $advertising = $_POST['advertising'];
+    $result = $_POST['result'];
     
 
 
@@ -81,25 +82,25 @@ $mail->SMTPDebug = 3;                               // Enable verbose debug outp
 $mail->isMail();
 $mail->CharSet = 'UTF-8';   
 $mail->setFrom('from@gobanner.com', 'GoBanner заказ баннера');
-$mail->addAddress('skullhead99@mail.ru', 'Joe User');     // Add a recipient
-$mail->addReplyTo('skullhead99@mail.ru', 'Information');
-$mail->addCC('skullhead99@mail.ru');
-$mail->addBCC('skullhead99@mail.ru');
+$mail->addAddress('sales@gobanner.ru');     // Add a recipient
+$mail->addReplyTo('sales@gobanner.ru');
+$mail->addCC('sales@gobanner.ru');
+$mail->addBCC('sales@gobanner.ru');
 
-$mail->addAttachment($attachments['upload_fonts']['tmp_name'], $attachments['upload_fonts']['name']);         // Add attachments
-$mail->addAttachment($attachments['upload_logo']['tmp_name'], $attachments['upload_logo']['name']); 
-$mail->addAttachment($attachments['upload_creative']['tmp_name'], $attachments['upload_creative']['name']);         // Add attachments
-$mail->addAttachment($attachments['upload_banner']['tmp_name'], $attachments['upload_banner']['name']);
-$mail->addAttachment($attachments['upload_material']['tmp_name'], $attachments['upload_material']['name']); 
+// $mail->addAttachment($attachments['upload_fonts']['tmp_name'], $attachments['upload_fonts']['name']);         // Add attachments
+// $mail->addAttachment($attachments['upload_logo']['tmp_name'], $attachments['upload_logo']['name']); 
+// $mail->addAttachment($attachments['upload_creative']['tmp_name'], $attachments['upload_creative']['name']);         // Add attachments
+// $mail->addAttachment($attachments['upload_banner']['tmp_name'], $attachments['upload_banner']['name']);
+// $mail->addAttachment($attachments['upload_material']['tmp_name'], $attachments['upload_material']['name']); 
   // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заказ с сайта GoBanner от: '.$sender_name.'';
-$mail->Body    = 'E-mail заказчика: '.$sender_email.'<br>Выбран формат: '.$format.'<br>Выбрана рекламная площадка: '.$advertising.'';
+$mail->Subject = 'Заказ с сайта GoBanner от: '.$sender_name.' Желаемый результат';
+$mail->Body    = 'E-mail заказчика: '.$sender_email.'<br>Желаемый результат: '.$result.'';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if($mail->send()) {
-    echo'<script>window.location.href="http://host1760558.hostland.pro/views/create-banner-2step.php"; </script>'; // поменять на серваке
+    echo'<script>window.location.href="http://host1760558.hostland.pro/views/campaigns.php"; </script>'; // поменять на серваке
 }
 }
 ?>

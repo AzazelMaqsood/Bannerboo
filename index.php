@@ -37,10 +37,40 @@ require "./db.php";
                                 <li class="dropdown menu__item">
                                   <a href="#" class="" data-toggle="dropdown">Создать баннер</a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="./views/create-banner.php">Создать баннер</a></li>
+                                    <li>
+                                    <a href="#">
+                                        <?php if( isset($_SESSION['logged_user'])) :?>
+                                        
+                                        <a href="./views/create-banner.php">Создать баннер</a></li>
+
+                                        <?php else : ?>
+                                        <a href="#openModal">Создать баннер</a></li>
+                                        <?php endif; ?>
+                                    </a>
+                                    </li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Создать ресайз</a></li>
-                                    <li><a href="./views/campaigns.php">Мои кампании</a></li>
+                                    <li>
+                                        <a href="#">
+                                            <?php if( isset($_SESSION['logged_user'])) :?>
+                                            
+                                            <a href="./views/create-banner.php">Создать ресайз</a>
+
+                                            <?php else : ?>
+                                            <a href="#openModal">Создать ресайз</a>
+                                            <?php endif; ?>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <?php if( isset($_SESSION['logged_user'])) :?>
+                                            
+                                            <a href="./views/campaigns.php">Мои кампании</a></li>
+
+                                            <?php else : ?>
+                                            <a href="#openModal">Мои кампании</a></li>
+                                            <?php endif; ?>
+                                        </a>
+                                    </li>
                                   </ul>
                                 </li>
                             <li class="menu__item">
@@ -50,7 +80,13 @@ require "./db.php";
                             </li>
                             <li class="menu__item">
                                 <a href="#">
-                                    Тарифы
+                                    <?php if( isset($_SESSION['logged_user'])) :?>
+                                    
+                                    <a href="./views/profile.php">Тарифы</a></li>
+
+                                    <?php else : ?>
+                                    <a href="#openModal">Тарифы</a></li>
+                                    <?php endif; ?>
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -103,9 +139,11 @@ require "./db.php";
             </div>
             <div class="row">
                 <div class="col-lg-2">
-                    <button class="btn-more">
-                        ПОДРОБНЕЕ
-                    </button>
+                    <a href="#anchorwhat">
+                        <button class="btn-more">
+                            ПОДРОБНЕЕ
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -184,9 +222,14 @@ require "./db.php";
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <button class="btn-1call">
-                        СОЗДАТЬ БАННЕР
-                    </button>
+                    
+                    <?php if( isset($_SESSION['logged_user'])) :?>
+                                        
+                        <a href="./views/create-banner.php"></a>
+                            <button class="btn-1call">СОЗДАТЬ БАННЕР</button>
+                        <?php else : ?>
+                        <a href="#openModal"><button class="btn-1call">СОЗДАТЬ БАННЕР</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -249,9 +292,14 @@ require "./db.php";
         <div class="container">
                 <div class="row">
                         <div class="col-lg-12">
-                            <button class="btn-2call">
-                                СОЗДАТЬ БАННЕР
-                            </button>
+                        <?php if( isset($_SESSION['logged_user'])) :?>
+                                        
+                            <a href="./views/create-banner.php">
+                                <button class="btn-2call">СОЗДАТЬ БАННЕР</button>
+                            </a>
+                            <?php else : ?>
+                            <a href="#openModal"><button class="btn-2call">СОЗДАТЬ БАННЕР</button></a>
+                        <?php endif; ?>
                         </div>
                     </div>
         </div>
@@ -359,16 +407,20 @@ require "./db.php";
         <div class="container">
             <div class="row">
                     <div class="col-lg-12">
-                        <button class="btn-1call">
-                            СОЗДАТЬ БАННЕР
-                        </button>
+                    <?php if( isset($_SESSION['logged_user'])) :?>
+                                        
+                        <a href="./views/create-banner.php"></a>
+                            <button class="btn-1call">СОЗДАТЬ БАННЕР</button>
+                        <?php else : ?>
+                        <a href="#openModal"><button class="btn-1call">СОЗДАТЬ БАННЕР</button></a>
+                    <?php endif; ?>
                     </div>
                 </div>
         </div>
     </section>
 
-    <section class="questions" id="questions">
-        <div class="container">
+    <section class="questions" id="questions" >
+        <div class="container" name="anchorwhat" id="anchorwhat">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>

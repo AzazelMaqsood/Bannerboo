@@ -14,10 +14,35 @@
                         <li class="dropdown menu__item">
                             <a href="#" class="" data-toggle="dropdown">Создать баннер</a>
                             <ul class="dropdown-menu">
-                                <li><a href="./create-banner.php">Создать баннер</a></li>
+                                <li>
+                                <?php if( isset($_SESSION['logged_user'])) :?>
+                                
+                                <a href="./create-banner.php">Создать баннер</a></li>
+
+                                <?php else : ?>
+                                <a href="#openModal">Создать баннер</a></li>
+                                <?php endif; ?>
+                                </li>
+
                                 <li class="divider"></li>
-                                <li><a href="#">Создать ресайз</a></li>
-                                <li><a href="./campaigns.php">Мои кампании</a></li>
+                                <li>
+                                <?php if( isset($_SESSION['logged_user'])) :?>
+                                
+                                <a href="./create-banner.php">Создать ресайз</a></li>
+
+                                <?php else : ?>
+                                <a href="#openModal">Создать ресайз</a></li>
+                                <?php endif; ?>
+                                </li>
+                                <li>
+                                <?php if( isset($_SESSION['logged_user'])) :?>
+                                
+                                <a href="./campaigns.php">Мои кампании</a></li>
+
+                                <?php else : ?>
+                                <a href="#openModal">Мои кампании</a></li>
+                                <?php endif; ?>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu__item">
@@ -26,8 +51,14 @@
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a href="#">
-                                Тарифы
+                            <a href="">
+                                <?php if( isset($_SESSION['logged_user'])) :?>
+                                
+                                <a href="./profile.php">Тарифы</a></li>
+
+                                <?php else : ?>
+                                <a href="#openModal">Тарифы</a></li>
+                                <?php endif; ?>
                             </a>
                         </li>
                         <li class="menu__item">

@@ -1,7 +1,7 @@
 <? 
 // ----------------------------конфигурация-------------------------- // 
  
-$adminemail="admin@site.ru";  // e-mail админа 
+$adminemail="info@gobanner.ru";  // e-mail админа 
  
  
 $date=date("d.m.y"); // число.месяц.год 
