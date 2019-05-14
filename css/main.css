@@ -1678,6 +1678,9 @@ color: #ffffff;
     font-family: "PT Sans" !important;
 }
 
+.interval {
+    line-height: 1.5;
+}
 
 
 /*Медиа-запросы*/

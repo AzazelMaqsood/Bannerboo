@@ -25,7 +25,7 @@
                         НАПИШИТЕ НАМ!
                     </h1>
 
-                    <form action="../send.php" method="post">
+                    <form action="../send" method="post">
                         <div class="form-row">
                             <div class="col">
                             <input type="text" name="name" class="form-control" placeholder="Ваше имя" required>

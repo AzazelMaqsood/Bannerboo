@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">   
             <div class="col-lg-4 d-flex">
-                <a href="../index.php"><img src="../img/logo.png" alt="logo" class="logo"></a>
+                <a href="../index"><img src="../img/logo.png" alt="logo" class="logo"></a>
                 <p class="logo-text">Онлайн-конструктор <br>
                     HTML5 баннеров</p>
             </div>
@@ -17,7 +17,7 @@
                                 <li>
                                 <?php if( isset($_SESSION['logged_user'])) :?>
                                 
-                                <a href="./create-banner.php">Создать баннер</a></li>
+                                <a href="./create-banner">Создать баннер</a></li>
 
                                 <?php else : ?>
                                 <a href="#openModal">Создать баннер</a></li>
@@ -28,7 +28,7 @@
                                 <li>
                                 <?php if( isset($_SESSION['logged_user'])) :?>
                                 
-                                <a href="./create-banner.php">Создать ресайз</a></li>
+                                <a href="./create-banner">Создать ресайз</a></li>
 
                                 <?php else : ?>
                                 <a href="#openModal">Создать ресайз</a></li>
@@ -37,7 +37,7 @@
                                 <li>
                                 <?php if( isset($_SESSION['logged_user'])) :?>
                                 
-                                <a href="./campaigns.php">Мои кампании</a></li>
+                                <a href="./campaigns">Мои кампании</a></li>
 
                                 <?php else : ?>
                                 <a href="#openModal">Мои кампании</a></li>
@@ -46,7 +46,7 @@
                             </ul>
                         </li>
                         <li class="menu__item">
-                            <a href="./blog.php">
+                            <a href="./blog">
                                 Блог
                             </a>
                         </li>
@@ -54,7 +54,7 @@
                             <a href="">
                                 <?php if( isset($_SESSION['logged_user'])) :?>
                                 
-                                <a href="./profile.php">Тарифы</a></li>
+                                <a href="./profile">Тарифы</a></li>
 
                                 <?php else : ?>
                                 <a href="#openModal">Тарифы</a></li>
@@ -68,7 +68,7 @@
                         </li>
                         <a href="">
                             <?php if( isset($_SESSION['logged_user'])) :?>
-                            <a href="../logout.php"><button class="btn-profile">Выйти</button></a>
+                            <a href="../logout"><button class="btn-profile">Выйти</button></a>
                             <?php else : ?>
                             <a href="#openModal"><button class="btn-profile">Войти</button></a>
                             <?php endif; ?>

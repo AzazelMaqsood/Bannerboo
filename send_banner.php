@@ -84,10 +84,10 @@ $mail->SMTPDebug = 3;                               // Enable verbose debug outp
 $mail->isMail();
 $mail->CharSet = 'UTF-8';   
 $mail->setFrom('from@gobanner.com', 'GoBanner заказ баннера');
-$mail->addAddress('sales@gobanner.ru', 'Joe User');     // Add a recipient
-$mail->addReplyTo('sales@gobanner.ru', 'Information');
-$mail->addCC('sales@gobanner.ru');
-$mail->addBCC('sales@gobanner.ru');
+$mail->addAddress('sales@gobanner.ru', 'Дизайнер');     // Add a recipient
+$mail->addReplyTo('dm@pln-b.ru', 'GoBanner заказ баннера');
+// $mail->addCC('sales@gobanner.ru');
+// $mail->addBCC('sales@gobanner.ru');
 
 $mail->addAttachment($attachments['upload_fonts']['tmp_name'], $attachments['upload_fonts']['name']);         // Add attachments
 $mail->addAttachment($attachments['upload_logo']['tmp_name'], $attachments['upload_logo']['name']); 

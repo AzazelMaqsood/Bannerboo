@@ -120,7 +120,7 @@
                                           </form>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="subscribe">Подписка</div>
+                        <div role="tabpanel" class="tab-pane fade" id="subscribe">Нет информации о вашей подписке</div>
                         <div role="tabpanel" class="tab-pane fade" id="tarif">
 
                         <div class="container">
@@ -153,8 +153,8 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="payments">
                             <div class="row block-pay">
-                                <div class="col col-lg-3">
-                                    <p>Ваш текущий тариф: <strong>СТАРТ</strong></p> 
+                                <div class="col col-lg-4">
+                                    <p>Ваш текущий тариф: <strong>БЕСПЛАТНЫЙ</strong></p> 
                                 </div>
                             </div>
 
@@ -162,7 +162,7 @@
                                 <div class="row grey">
                                     <div class="col-lg-3 d-flex">
                                         <p>Остаток: &nbsp</p>
-                                        <p class="balance">$12,75</p>
+                                        <p class="balance">$0,00</p>
                                     </div>
     
                                     <div class="col-lg-3 offset-6">
@@ -172,8 +172,8 @@
 
                                 <div class="row grey">
                                     <div class="col-lg-5 d-flex">
-                                        <p>Последний платеж был совершен:  05.01.2019
-                                                Внесенная сумма: $36</p>
+                                        <p>Последний платеж был совершен:  нет данных
+                                                Внесенная сумма: $0</p>
                                     </div>
                                 </div>
 

@@ -22,7 +22,7 @@
 
     <section class="create-banner-content">
         <div class="container">
-            <form action="../send_banner.php" method="POST" enctype="multipart/form-data">
+            <form action="../send_banner" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>СОЗДАТЬ БАННЕР</h1>

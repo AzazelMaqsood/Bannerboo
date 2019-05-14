@@ -86,7 +86,7 @@ require "../db.php";
 
         <div class="row">
             <div class="col-lg-5">
-                <form action="./registration.php" method="POST">
+                <form action="./registration" method="POST">
                     <p>
                         <div class="form-group">
                             <input type="text" name="surname" class="form-control" id="InputSurnameReg" placeholder="Фамилия*" required value="<?php echo @$data['surname']; ?>">

@@ -54,7 +54,7 @@
         </form>
 
         <p>
-            Нет аккаунта? Пройдите <a href="./views/registration.php" class="other">Регистрацию</a>
+            Нет аккаунта? Пройдите <a href="./views/registration" class="other">Регистрацию</a>
         </p>
     </div>
 </div>

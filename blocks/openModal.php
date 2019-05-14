@@ -33,7 +33,7 @@
         <a href="#close1" title="Закрыть" class="close1">x</a>
         
         <h2>АВТОРИЗАЦИЯ</h2>
-        <form action="./profile.php" method="POST">
+        <form action="./profile" method="POST">
             <p>
                 <div class="form-group">
                     <input type="text" name="login" class="form-control" placeholder="Введите логин" required value="<?php echo @$data['login']; ?>">
@@ -53,7 +53,7 @@
         </form>
 
         <p>
-            Нет аккаунта? Пройдите <a href="../views/registration.php" class="other">Регистрацию</a>
+            Нет аккаунта? Пройдите <a href="../views/registration" class="other">Регистрацию</a>
         </p>
     </div>
 </div>
